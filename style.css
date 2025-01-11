@@ -13,6 +13,14 @@ body {
   background-position: center;
 }
 
+#current-time {
+  color: black;
+  font-size: 7vh;
+  margin-left: 6vh;
+  margin-top: 6vh;
+  position: absolute;
+}
+
 #app1 {
   text-align: center;
   background: #535353;

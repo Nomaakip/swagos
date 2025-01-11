@@ -125,3 +125,12 @@ document.getElementById("pic").addEventListener("change", function (e) {
   }
 });
 window.onload = checkLocalStorage;
+function cac() {
+  const currentTime = new Date();
+  const hours = String(currentTime.getHours()).padStart(2, '0');
+  const minutes = String(currentTime.getMinutes()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}`;
+  document.getElementById('current-time').textContent = timeString;
+}
+setInterval(cac, 1000);
+cac();
