@@ -94,11 +94,19 @@ function getLocalStorage(name) {
 
 function checkLocalStorage() {
   const wallpaper = getLocalStorage("wallpaper");
+  const pfp = getLocalStorage("profile_pic");
 
   if (wallpaper) {
     document.body.style.backgroundImage = wallpaper;
   }
+
+  if (pfp) {
+    document.getElementById("profile_picture").style.backgroundImage = pfp;
+  }
+
 }
+
+
 
 document.getElementById("wallpaper").addEventListener("change", function (e) {
   const file = e.target.files[0];
