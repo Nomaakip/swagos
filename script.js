@@ -101,7 +101,7 @@ function checkLocalStorage() {
   }
 
   if (pfp) {
-    document.getElementById("profile_picture").style.backgroundImage = pfp;
+    profile_picture.src = pfp;
   }
 
 }
@@ -126,7 +126,6 @@ document.getElementById("pic").addEventListener("change", function (e) {
     const reader = new FileReader();
     reader.onload = function (event) {
       const pfp = event.target.result;
-      document.getElementById("profile_picture").src = pfp
       setLocalStorage("profile_pic", "url('" + pfp + "')");
     };
     reader.readAsDataURL(file);
@@ -140,5 +139,24 @@ function cac() {
   const timeString = `${hours}:${minutes}`;
   document.getElementById('current-time').textContent = timeString;
 }
+
+function checks() {
+  //do not run yet 
+  let storedUser = localStorage.getItem("username");
+        let storedPass = localStorage.getItem("password");
+
+        if (storedUser + storedPass) {
+          document.getElementById("main").style.display = 'none';
+          document.body.style.overflow = 'hidden';
+          document.body.style.backgroundImage = "url('greg.jpeg')";
+        }
+
+        else {
+          document.getElementById("main").style.display = 'none';
+
+        }
+
+}
 setInterval(cac, 1000);
 cac();
+checkLocalStorage();

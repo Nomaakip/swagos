@@ -5,26 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="login.css">
     <title>swagos test idk</title>
+
 </head>
 
 <body>
-    <h1 id="usr">username</h1>
-    <input type="text" id="ui">
-    <h1 id="psw">password</h1>
-    <input type="password" id="pi">
-    <button onclick="savepass()">save</button>
+    <div id="container">
+        <h1 id="welcome1">Welcome to swagos!</h1>
+            <input placeholder="username" type="text" id="ui">
+            <input type="password" id="pi" placeholder="password">
+            <button onclick="savepass()">save</button>
 
-    <h1>login</h1>
+            <div style="display: none;">
+        <h1 id="welcome">login</h1>
 
-    <input type="text" id="ui2">
-    <h1 id="psw">password</h1>
-    <input type="password" id="pi2">
-    <button onclick="login()">login</button>
+
+        <input type="password" id="pi2" placeholder="password">
+        <button onclick="login()">login</button>
+        </div>
+    </div>
     <script>
+
+        let storedUser = localStorage.getItem("username");
+        let storedPass = localStorage.getItem("password");
+
+        document.getElementById("welcome").innerHTML = "Welcome, " + storedUser + "!";
+
         function savepass() {
             let username = document.getElementById("ui").value;
             let password = document.getElementById("pi").value;
@@ -37,13 +47,11 @@
         }
 
         function login() {
-            let storedUser = localStorage.getItem("username");
-            let storedPass = localStorage.getItem("password");
-            
-            let inputUser = document.getElementById("ui2").value;
+
+
             let inputPass = document.getElementById("pi2").value;
 
-            if (inputUser === storedUser && inputPass === storedPass) {
+            if (inputPass === storedPass) {
                 console.log("logged in as " + storedUser);
             }
 

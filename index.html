@@ -13,58 +13,144 @@
 </head>
 
 <body>
-  
-  <strong id="current-time"></strong>
-  <div id="app1">
-    <div id="close1">
-      <span id="soon">soon</span>
-      <div id="close" onclick="closeapp1()">
-        x
+  <div id="main">
+    <strong id="current-time"></strong>
+    <div id="app1">
+      <div id="close1">
+        <span id="soon">soon</span>
+        <div id="close" onclick="closeapp1()">
+          x
 
-      </div>
-    </div>
-    <h1>soon
-    </h1>
-  </div>
-
-  <div id="settings_app" class="settings-container">
-    <div id="settings_header" class="settings-header">
-      <span class="settings-title">Settings</span>
-      <div id="close_settings" class="close-button" onclick="closesettings()">x</div>
-    </div>
-    <div class="settings-sidebar">
-      <ul>
-        <li onclick="showSection('personalization')">Personalization</li>
-      </ul>
-    </div>
-    <div class="settings-content">
-      <div id="personalization" class="settings-section">
-        <h2>Personalization</h2>
-        <div class="settings-item">
-          <label for="wallpaper">Wallpaper</label>
-          <input type="file" id="wallpaper">
-        </div>
-        <div class="settings-item">
-          <label for="profile_pic">Profile Picture</label>
-          <input type="file" id="pic">
         </div>
       </div>
+      <h1>soon
+      </h1>
+    </div>
+
+    <div id="settings_app" class="settings-container">
+      <div id="settings_header" class="settings-header">
+        <span class="settings-title">Settings</span>
+        <div id="close_settings" class="close-button" onclick="closesettings()">x</div>
+      </div>
+      <div class="settings-sidebar">
+        <ul>
+          <li onclick="showSection('personalization')">Personalization</li>
+        </ul>
+      </div>
+      <div class="settings-content">
+        <div id="personalization" class="settings-section">
+          <h2>Personalization</h2>
+          <div class="settings-item">
+            <label for="wallpaper">Wallpaper</label>
+            <input type="file" id="wallpaper">
+          </div>
+          <div class="settings-item">
+            <label for="profile_pic">Profile Picture</label>
+            <input type="file" id="pic">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="taskbar">
+      <div id="apps">
+        <img style="cursor:pointer;"
+          src="https://imgs.search.brave.com/Fk_eLgxut-Gx1KwazMCjrhF_aKizQgY_lQvUzyJViHQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8yLzJkL0Rv/Z18tXyVFMCVCNCVB/OCVFMCVCNCVCRSVF/MCVCNCVBRi02LkpQ/Ry81MTJweC1Eb2df/LV8lRTAlQjQlQTgl/RTAlQjQlQkUlRTAl/QjQlQUYtNi5KUEc"
+          id="profile_picture">
+        <img onclick="openapp1()" style="cursor:pointer;"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQhUHWTNFAa7Tu8Bp6dPJLAkafGRdH11Bh4xlSzgOdA&s"
+          id="catapp">
+        <img onclick="opensettings()" src="assets\settings.svg" id="settings" style="-webkit-user-drag: none;">
+      </div>
     </div>
   </div>
+  <div id="container" style="display: none;">
+    <h1 id="welcome1" style="color: #fff;
+    margin-bottom: 20px;
+    transition: .3s;">Welcome to swagos!</h1>
+    <input placeholder="username" type="text" id="ui" style="width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background: none;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+        border: 1px solid rgba(255, 255, 2555, 0.18);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37);
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: #fff;
+        transition: .3s;">
+    <input type="password" id="pi" placeholder="password" style="width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 2555, 0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: .3s;">
+    <button onclick="savepass()" style="background: rgb(255, 199, 0);
+    background: -moz-linear-gradient(100deg, rgba(255, 199, 0, 1) 0%, rgba(235, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(100deg, rgba(255, 199, 0, 1) 0%, rgba(235, 0, 0, 1) 100%);
+    background: linear-gradient(100deg, rgba(255, 199, 0, 1) 0%, rgba(235, 0, 0, 1) 100%);
+    margin-top: 10px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .3s;">save</button>
+
+    <div style="display: none;">
+      <h1 id="welcome" style="color: #fff;
+      margin-bottom: 20px;
+      transition: .3s;">login</h1>
 
 
-
-  <div id="taskbar">
-  <div id="apps">
-    <img style="cursor:pointer;"
-    src="https://imgs.search.brave.com/Fk_eLgxut-Gx1KwazMCjrhF_aKizQgY_lQvUzyJViHQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8yLzJkL0Rv/Z18tXyVFMCVCNCVB/OCVFMCVCNCVCRSVF/MCVCNCVBRi02LkpQ/Ry81MTJweC1Eb2df/LV8lRTAlQjQlQTgl/RTAlQjQlQkUlRTAl/QjQlQUYtNi5KUEc"
-    id="profile_picture">
-    <img onclick="openapp1()" style="cursor:pointer;"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQhUHWTNFAa7Tu8Bp6dPJLAkafGRdH11Bh4xlSzgOdA&s"
-      id="catapp">
-    <img onclick="opensettings()" src="assets\settings.svg" id="settings" style="-webkit-user-drag: none;">
-</div>
+      <input type="password" id="pi2" placeholder="password">
+      <button onclick="login()">login</button>
+    </div>
   </div>
+  <script>
+
+    let storedUser = localStorage.getItem("username");
+    let storedPass = localStorage.getItem("password");
+
+    document.getElementById("welcome").innerHTML = "Welcome, " + storedUser + "!";
+
+    function savepass() {
+      let username = document.getElementById("ui").value;
+      let password = document.getElementById("pi").value;
+
+      console.log(username);
+      console.log(password);
+
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+    }
+
+    function login() {
+
+
+      let inputPass = document.getElementById("pi2").value;
+
+      if (inputPass === storedPass) {
+        console.log("logged in as " + storedUser);
+      }
+
+      else {
+        console.log("wrong username or password");
+      }
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    overflow: hidden;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #272424;
+    background-image: url('https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: .3s;
+}
+
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 2555, 0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: .3s;
+}
+
+input::placeholder {
+    color: #ccc;
+
+}
+
+button {
+    background: rgb(255, 199, 0);
+    background: -moz-linear-gradient(100deg, rgba(255, 199, 0, 1) 0%, rgba(235, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(100deg, rgba(255, 199, 0, 1) 0%, rgba(235, 0, 0, 1) 100%);
+    background: linear-gradient(100deg, rgba(255, 199, 0, 1) 0%, rgba(235, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc700", endColorstr="#eb0000", GradientType=1);
+    margin-top: 10px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .3s;
+}
